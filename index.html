@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>ENVELO</h1>
+        <h3>Możesz mieć swoją przesyłkę w kilkanaście sekund.</h3>
+        <h3>Rozpocznij klijakąc przycisk.</h3>
+        <div class="inputs hidden">
+            <label for="number" class="grid-label grid-label-1">Numer telefonu</label>
+            <input type="tel" pattern="[0-9]{9}" id="number" class="grid-area grid-area-1" maxlength="9" required>
+            <label for="code" class="grid-label grid-label-2">Kod odbioru</label>
+            <input type="tel" id="code" class="grid-area grid-area-2" maxlength="4" required>
+        </div>
+        <div class="error-info"></div>
+        <button class="get-package hidden"><span>Odbierz paczkę</span></button>
+        <button class="get-package-start">Odbierz paczkę</button>
+        <div class="popup hidden">
+            <h1>Paczka odebrana!</h1>
+            <p>Zrobiłeś to w czasie <span class="time"></span> sekund.</p>
+            <p>Czy możemy zrobić dla Ciebie coś jeszcze?</p>
+            <div class="btns">
+                <button class="get-package no-more">To wszystko na dziś</button>
+                <button class="get-package next-package">Odbierz kolejna paczkę</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
